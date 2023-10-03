@@ -10,6 +10,7 @@ class Interface:
         ly_saludo = [
             [sg.Text("Universidad Nacional de Trujillo", text_color="red")],
             [sg.Text("Ingeniería Mecatrónica", text_color="red")],
+            [sg.Text("Teoría de Máquinas y Mecanismos", text_color="red")],
             [sg.Image("unt.png")], [sg.Image("mecatronica.png")],
             [sg.Text("Integrantes:", text_color="black")],
             [sg.Text("Calderón Alvarado, Jeremy Lorenzo", text_color="black")],
