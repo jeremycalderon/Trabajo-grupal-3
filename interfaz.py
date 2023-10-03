@@ -107,85 +107,86 @@ while ejecuta:
                     if event == "Salir"  or event == sg.WINDOW_CLOSED:
                         break
                     if event == 'Graficar':
-                        Interface.hacer_mecanismo(int(values['input_height1']),int(values['input_height2']))
-                        inicio1.close()
-                        while True:
-                            event, values = inicio2.read()
-                            if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                break
-                            if event == "Graficar":
-                                if values['input_height3'] == "36":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_36.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_36.close()
-                                elif values['input_height3'] == "72":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_72.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_72.close()
-                                elif values['input_height3'] == "108":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_108.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_108.close()
-                                elif values['input_height3'] == "144":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_144.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_144.close()
-                                elif values['input_height3'] == "180":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_180.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_180.close()
-                                elif values['input_height3'] == "216":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_216.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_216.close()
-                                elif values['input_height3'] == "252":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_252.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_252.close()
-                                elif values['input_height3'] == "288":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_288.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_288.close()
-                                elif values['input_height3'] == "324":
-                                    inicio2.close()
-                                    while True:
-                                        event,values = curva_324.read()
-                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
-                                            break
-                                        if event == "Finalizar":
-                                            curva_324.close()
+                        if values['input_height2'] == "36" or values['input_height2'] == "72" or values['input_height2'] == "108" or values['input_height2'] == "144" or values['input_height2'] == "180" or values['input_height2'] == "216" or values['input_height2'] == "252" or values['input_height2'] == "288" or values['input_height2'] == "324":
+                            Interface.hacer_mecanismo(int(values['input_height1']),int(values['input_height2']))
+                            inicio1.close()
+                            while True:
+                                event, values = inicio2.read()
+                                if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                    break
+                                if event == "Graficar":
+                                    if values['input_height3'] == "36":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_36.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_36.close()
+                                    elif values['input_height3'] == "72":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_72.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_72.close()
+                                    elif values['input_height3'] == "108":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_108.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_108.close()
+                                    elif values['input_height3'] == "144":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_144.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_144.close()
+                                    elif values['input_height3'] == "180":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_180.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_180.close()
+                                    elif values['input_height3'] == "216":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_216.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_216.close()
+                                    elif values['input_height3'] == "252":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_252.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_252.close()
+                                    elif values['input_height3'] == "288":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_288.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_288.close()
+                                    elif values['input_height3'] == "324":
+                                        inicio2.close()
+                                        while True:
+                                            event,values = curva_324.read()
+                                            if event == "Salir" or event == sg.WINDOW_CLOSED:
+                                                break
+                                            if event == "Finalizar":
+                                                curva_324.close()
 
 
     except:
