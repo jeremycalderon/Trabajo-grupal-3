@@ -75,11 +75,11 @@ class Interface:
         plt.plot(x_points, y_points, color="red")
         plt.plot(x2_points, y2_points, color="red")
         plt.show()
-    
+
 ejecuta = True
 
 while ejecuta:
-
+        
     sg.theme("LightBlue1")
     saludo = Interface.hacer_saludo()
     inicio1 = Interface.hacer_inicio1()
@@ -97,28 +97,28 @@ while ejecuta:
     try:
         while True:
             event, values = saludo.read()
-            if event == "Salir"  or event == sg.WIN_CLOSED:
+            if event == "Salir"  or event == sg.WINDOW_CLOSED:
                 break
             if event == "Iniciar":
                 sg.popup_ok("¿Estás listo/a para graficar?")
                 saludo.close()
                 while True:
                     event, values = inicio1.read()
-                    if event == "Salir"  or event == sg.WIN_CLOSED:
+                    if event == "Salir"  or event == sg.WINDOW_CLOSED:
                         break
                     if event == 'Graficar':
                         Interface.hacer_mecanismo(int(values['input_height1']),int(values['input_height2']))
                         inicio1.close()
                         while True:
                             event, values = inicio2.read()
-                            if event == "Salir" or event == sg.WIN_CLOSED:
+                            if event == "Salir" or event == sg.WINDOW_CLOSED:
                                 break
                             if event == "Graficar":
                                 if values['input_height3'] == "36":
                                     inicio2.close()
                                     while True:
                                         event,values = curva_36.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_36.close()
@@ -126,7 +126,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_72.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_72.close()
@@ -134,7 +134,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_108.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_108.close()
@@ -142,7 +142,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_144.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_144.close()
@@ -150,7 +150,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_180.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_180.close()
@@ -158,7 +158,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_216.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_216.close()
@@ -166,7 +166,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_252.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_252.close()
@@ -174,7 +174,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_288.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_288.close()
@@ -182,7 +182,7 @@ while ejecuta:
                                     inicio2.close()
                                     while True:
                                         event,values = curva_324.read()
-                                        if event == "Salir" or event == sg.WIN_CLOSED:
+                                        if event == "Salir" or event == sg.WINDOW_CLOSED:
                                             break
                                         if event == "Finalizar":
                                             curva_324.close()
@@ -204,4 +204,3 @@ while ejecuta:
         curva_288.close()
         curva_324.close()
         print("Todo cerrado")
-
