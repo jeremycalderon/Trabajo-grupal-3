@@ -203,4 +203,5 @@ while ejecuta:
         curva_252.close()
         curva_288.close()
         curva_324.close()
+        ejecuta = False
         print("Todo cerrado")
