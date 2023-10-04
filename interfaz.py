@@ -107,7 +107,9 @@ while ejecuta:
                     if event == "Salir"  or event == sg.WINDOW_CLOSED:
                         break
                     if event == 'Graficar':
-                        if values['input_height2'] == "36" or values['input_height2'] == "72" or values['input_height2'] == "108" or values['input_height2'] == "144" or values['input_height2'] == "180" or values['input_height2'] == "216" or values['input_height2'] == "252" or values['input_height2'] == "288" or values['input_height2'] == "324":
+                        if int(values['input_height1'])<0 or int(values['input_height1'])>360 or (int(values['input_height2']) != 36 and int(values['input_height2']) != 72 and int(values['input_height2']) != 108 and int(values['input_height2']) != 144 and int(values['input_height2']) != 180 and int(values['input_height2']) != 216 and int(values['input_height2']) != 252 and int(values['input_height2']) != 288 and int(values['input_height2']) != 324):
+                            sg.popup_ok("Los valores de alfa y/o ganma son incorrectos")
+                        else:        
                             Interface.hacer_mecanismo(int(values['input_height1']),int(values['input_height2']))
                             inicio1.close()
                             while True:
@@ -187,8 +189,8 @@ while ejecuta:
                                                 break
                                             if event == "Finalizar":
                                                 curva_324.close()
-
-
+                                    else:
+                                        sg.popup_ok("Valor de ganma no válido")
     except:
         print("Ocurrió algún error")
     finally:
@@ -204,5 +206,5 @@ while ejecuta:
         curva_252.close()
         curva_288.close()
         curva_324.close()
-        ejecuta = False
         print("Todo cerrado")
+        ejecuta = False
